@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Image } from 'react-native';
 import { render } from 'react-dom';
 
 export default class LogIn extends React.Component {
@@ -11,9 +11,10 @@ export default class LogIn extends React.Component {
                     <Text>Header</Text>
                 </View>
                 <View style={styles.body}>
-                    <View>
+                    <View style={{borderWidth:1, borderRadius:50, flex:1, flexDirection:'row', justifyContent:'center', alignItems:'center', width:250, height:10}}>
+                        <Image source={require('../img/email.png')} style={{height:40, width:40}}/>
                         <TextInput
-                        style={{ width:200, borderWidth:1}}
+                        style={{ width:200, fontSize:30}}
                         onChange={text =>onChangeText(text)}
                         value="sfd"
                         />
